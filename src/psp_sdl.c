@@ -562,7 +562,7 @@ psp_sdl_load_png(SDL_Surface* my_surface, char* filename)
 
   png_uint_32 width = png_get_image_width(png_ptr, info_ptr);
   png_uint_32 height = png_get_image_height(png_ptr, info_ptr);
-  png_uint_32 color_type = png_get_color_type(png_ptr, info_ptr);
+  int color_type = png_get_color_type(png_ptr, info_ptr);
 
   if ((width  > w) ||
       (height > h)) {
