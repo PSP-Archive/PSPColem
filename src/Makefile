@@ -54,7 +54,7 @@ unzip.o \
 psp_fmgr.o
 
 
-DEFAULT_CFLAGS = $(shell $(SDL_CONFIG) --cflags)
+DEFAULT_CFLAGS = $(shell $(SDL_CONFIG) --cflags) -G0
 
 PSP_FW_VERSION=500
 PSPCOLEM_VERSION=1.3.1-fw5x
@@ -73,7 +73,7 @@ OPTIM_CFLAGS= -O2
 CFLAGS = $(DEFAULT_CFLAGS) $(MORE_CFLAGS)
 CXXFLAGS = $(DEFAULT_CFLAGS) $(MORE_CFLAGS) -fno-exceptions -fno-rtti
 
-LIBS += -lpspirkeyb -lpsppower -lSDL_image -lSDL -lpng -ljpeg -lpspaudio -lpspgu -lpsphprm -lz -lm
+LIBS += -lpspirkeyb -lpsppower -lSDL_image -lSDL -lGL -lpspvfpu -lpsprtc -lpng -ljpeg -lpspaudio -lpspgu -lpsphprm -lz -lm
 
 BUILD_PRX=1
 

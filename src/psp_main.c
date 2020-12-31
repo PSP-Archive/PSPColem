@@ -170,7 +170,7 @@ main(int argc, char *argv[])
 	atexit(cleanup_output);
 
 #ifndef LINUX_MODE
-  psp_irda_load_config();
+  //psp_irda_load_config();
 # ifdef USE_PSP_IRKEYB
   psp_irkeyb_init();
 # endif
